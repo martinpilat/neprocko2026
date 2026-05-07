@@ -93,6 +93,7 @@ instance Applicative Mozna where
 
 instance Monad Mozna where
     (>>=) = potom
+    return = pure -- neni potreba, je defaultni implementace
 
 -- ukazka do-notace pro Mozna - funkce, ktera pocita sqrt(log(x) + log(x - 5))
 safeSqrtLog x = do
